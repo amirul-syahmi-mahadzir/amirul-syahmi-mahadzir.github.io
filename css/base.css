@@ -1,0 +1,70 @@
+/* =========================
+   Design Variables
+   ========================= */
+
+:root {
+    --dark-navy: #080d19;
+    --dark-card: #111827;
+    --dark-card-hover: #162033;
+
+    --cyan: #22d3ee;
+    --cyan-light: #67e8f9;
+    --cyan-soft: rgba(34, 211, 238, 0.1);
+
+    --white: #f8fafc;
+    --light-text: #cbd5e1;
+    --muted-text: #94a3b8;
+
+    --line-color: rgba(148, 163, 184, 0.16);
+}
+
+
+/* =========================
+   Reset
+   ========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    overflow-x: hidden;
+
+    color: var(--white);
+
+    background:
+        radial-gradient(
+            circle at 85% 5%,
+            rgba(34, 211, 238, 0.08),
+            transparent 28%
+        ),
+        var(--dark-navy);
+
+    font-family: "Inter", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+
+/* =========================
+   Typography
+   ========================= */
+
+h1,
+h2,
+h3,
+h4,
+.logo {
+    font-family: "Manrope", "Inter", sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}

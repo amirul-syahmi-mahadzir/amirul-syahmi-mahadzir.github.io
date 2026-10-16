@@ -1,0 +1,1036 @@
+/* =========================
+   Hero Section
+========================= */
+
+.hero {
+    position: relative;
+    width: min(90%, 1200px);
+    min-height: 760px;
+    margin-inline: auto;
+    padding: 100px 0;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
+    align-items: center;
+    gap: 90px;
+}
+
+.hero::before {
+    position: absolute;
+    top: 120px;
+    right: 40px;
+    width: 360px;
+    height: 360px;
+
+    background-color: rgba(34, 211, 238, 0.08);
+    border-radius: 50%;
+    filter: blur(90px);
+
+    content: "";
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+}
+
+.intro {
+    display: inline-flex;
+    margin-bottom: 18px;
+    padding: 8px 13px;
+
+    color: var(--cyan);
+    background-color: rgba(34, 211, 238, 0.08);
+    border: 1px solid rgba(34, 211, 238, 0.22);
+    border-radius: 999px;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    margin-bottom: 16px;
+    font-size: clamp(52px, 6vw, 78px);
+    line-height: 1;
+    letter-spacing: -3px;
+}
+
+.hero h1 span {
+    color: var(--cyan);
+    background: linear-gradient(
+        90deg,
+        var(--cyan),
+        var(--cyan-light)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero h2 {
+    margin-bottom: 22px;
+    color: var(--light-text);
+    font-size: clamp(23px, 3vw, 30px);
+    font-weight: 600;
+}
+
+.hero-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-bottom: 22px;
+}
+
+.hero-highlights span {
+    padding: 7px 12px;
+    color: var(--light-text);
+    background-color: rgba(148, 163, 184, 0.07);
+    border: 1px solid var(--line-color);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.description {
+    max-width: 640px;
+    color: var(--muted-text);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+
+/* Profile Image */
+
+.hero-image {
+    position: relative;
+    z-index: 1;
+    justify-self: center;
+
+    width: 320px;
+    height: 380px;
+    padding: 7px;
+
+    background: linear-gradient(
+        145deg,
+        var(--cyan),
+        rgba(34, 211, 238, 0.15)
+    );
+
+    border-radius: 28px;
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.35),
+        0 0 0 1px rgba(34, 211, 238, 0.15);
+}
+
+.hero-image::before {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 90px;
+    height: 90px;
+
+    border-top: 2px solid var(--cyan);
+    border-right: 2px solid var(--cyan);
+    border-radius: 0 25px 0 0;
+
+    content: "";
+}
+
+.hero-image::after {
+    position: absolute;
+    bottom: -18px;
+    left: -18px;
+    width: 90px;
+    height: 90px;
+
+    border-bottom: 2px solid var(--cyan);
+    border-left: 2px solid var(--cyan);
+    border-radius: 0 0 0 25px;
+
+    content: "";
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+
+    background-color: var(--white);
+    border-radius: 22px;
+}
+
+/* =========================
+   About Section
+========================= */
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+}
+
+.about-text h3,
+.skills h3 {
+    margin-bottom: 25px;
+    font-size: 25px;
+    line-height: 1.4;
+}
+
+.about-text p {
+    margin-bottom: 18px;
+    color: var(--muted-text);
+    line-height: 1.8;
+}
+
+.skills-group {
+    margin-bottom: 25px;
+}
+
+.skills-group h4 {
+    margin-bottom: 12px;
+    color: var(--light-text);
+}
+
+/* =========================
+   AbilityScan Project
+========================= */
+
+.featured-project {
+    display: grid;
+    grid-template-columns: 1.05fr 1fr;
+    align-items: start;
+    gap: 45px;
+    padding: 35px;
+    background: linear-gradient(
+        145deg,
+        rgba(17, 24, 39, 0.98),
+        rgba(11, 17, 32, 0.95)
+    );
+    border: 1px solid var(--line-color);
+    border-radius: 22px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+}
+
+.project-gallery {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 10px;
+}
+
+.main-screenshot,
+.screenshot-item {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--dark-navy);
+    border: 1px solid var(--line-color);
+    border-radius: 12px;
+}
+
+.main-screenshot {
+    min-height: 430px;
+}
+
+.small-screenshots {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+}
+
+.screenshot-item {
+    min-height: 210px;
+}
+
+.project-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.4s ease;
+}
+
+.main-screenshot:hover img,
+.screenshot-item:hover img {
+    transform: scale(1.03);
+}
+
+.image-label {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    padding: 5px 10px;
+    color: var(--dark-navy);
+    background-color: var(--cyan);
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.project-category {
+    margin-bottom: 12px;
+    color: var(--cyan);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.project-content h3 {
+    margin-bottom: 20px;
+    font-size: 32px;
+    line-height: 1.3;
+}
+
+.project-content > p {
+    margin-bottom: 16px;
+    color: var(--muted-text);
+    line-height: 1.8;
+}
+
+.project-contribution {
+    margin-top: 25px;
+}
+
+.project-contribution h4 {
+    margin-bottom: 12px;
+    color: var(--light-text);
+}
+
+.project-contribution ul {
+    padding-left: 20px;
+    color: var(--muted-text);
+}
+
+.project-contribution li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+}
+
+.project-contribution li::marker {
+    color: var(--cyan);
+}
+
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.project-links .btn {
+    min-width: 155px;
+}
+
+
+/* =========================
+   FYP Exhibition
+========================= */
+
+.project-exhibition {
+    margin-top: 55px;
+    padding: 38px;
+    background-color: var(--dark-card);
+    border: 1px solid var(--line-color);
+    border-radius: 22px;
+}
+
+.exhibition-content {
+    max-width: 850px;
+    margin-bottom: 32px;
+}
+
+.exhibition-content h3 {
+    margin: 8px 0 12px;
+    font-size: 32px;
+}
+
+.exhibition-content > p:last-child {
+    color: var(--muted-text);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.exhibition-gallery {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    grid-template-rows: repeat(2, 235px);
+    gap: 16px;
+}
+
+.exhibition-image {
+    position: relative;
+    overflow: hidden;
+    min-width: 0;
+    background-color: #080d19;
+    border: 1px solid var(--line-color);
+    border-radius: 15px;
+}
+
+.exhibition-main {
+    grid-row: 1 / span 2;
+}
+
+/* Gambar utama portrait — tunjuk keseluruhan gambar */
+.exhibition-main img {
+    object-fit: contain;
+    object-position: center;
+}
+
+/* Dua gambar kumpulan di sebelah kanan */
+.exhibition-image:not(.exhibition-main) img {
+    object-fit: cover;
+    object-position: center;
+}
+
+.exhibition-image img {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.4s ease;
+}
+
+.exhibition-image:hover img {
+    transform: scale(1.02);
+}
+
+.exhibition-image figcaption {
+    position: absolute;
+    right: 13px;
+    bottom: 13px;
+    left: 13px;
+    padding: 10px 13px;
+    color: var(--white);
+    background-color: rgba(8, 13, 25, 0.86);
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* =========================
+   Internship Finder Project
+========================= */
+
+.secondary-project {
+    margin-top: 45px;
+    padding: 35px;
+    background-color: var(--dark-card);
+    border: 1px solid var(--line-color);
+    border-radius: 22px;
+}
+
+.secondary-project-header {
+    max-width: 850px;
+    margin-bottom: 30px;
+}
+
+.secondary-project-header h3 {
+    margin: 10px 0 16px;
+    font-size: 32px;
+    line-height: 1.3;
+}
+
+.secondary-project-header > p {
+    color: var(--muted-text);
+    line-height: 1.8;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 22px;
+}
+
+.project-meta span {
+    padding: 7px 12px;
+    color: var(--cyan);
+    background-color: var(--cyan-soft);
+    border: 1px solid rgba(34, 211, 238, 0.35);
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.internship-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.internship-gallery figure {
+    position: relative;
+    min-height: 280px;
+    overflow: hidden;
+    background-color: var(--dark-navy);
+    border: 1px solid var(--line-color);
+    border-radius: 14px;
+}
+
+.internship-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.4s ease;
+}
+
+.internship-gallery figure:hover img {
+    transform: scale(1.025);
+}
+
+.internship-gallery figcaption {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    padding: 9px 12px;
+    color: var(--white);
+    background-color: rgba(8, 13, 25, 0.86);
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.project-role {
+    margin-top: 30px;
+    padding: 24px;
+    background-color: rgba(8, 13, 25, 0.55);
+    border-left: 3px solid var(--cyan);
+    border-radius: 0 12px 12px 0;
+}
+
+.project-role h4 {
+    margin-bottom: 12px;
+    color: var(--light-text);
+}
+
+.project-role p,
+.project-role li {
+    color: var(--muted-text);
+    line-height: 1.7;
+}
+
+.project-role ul {
+    padding-left: 20px;
+    margin-top: 12px;
+}
+
+.project-role li {
+    margin-bottom: 7px;
+}
+
+.project-role li::marker {
+    color: var(--cyan);
+}
+
+
+/* =========================
+   IoT Project
+========================= */
+
+.iot-project {
+    margin-top: 45px;
+    padding: 35px;
+    background: linear-gradient(
+        145deg,
+        rgba(17, 24, 39, 0.98),
+        rgba(11, 17, 32, 0.94)
+    );
+    border: 1px solid var(--line-color);
+    border-radius: 22px;
+}
+
+.iot-content {
+    max-width: 900px;
+}
+
+.iot-content h3 {
+    margin: 10px 0 18px;
+    font-size: 32px;
+    line-height: 1.3;
+}
+
+.iot-content > p {
+    margin-bottom: 16px;
+    color: var(--muted-text);
+    line-height: 1.8;
+}
+
+.iot-workflow {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin: 28px 0;
+}
+
+.workflow-step {
+    padding: 20px;
+    background-color: rgba(8, 13, 25, 0.62);
+    border: 1px solid var(--line-color);
+    border-radius: 13px;
+}
+
+.workflow-step span {
+    display: inline-flex;
+    width: 34px;
+    height: 34px;
+    margin-bottom: 13px;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-navy);
+    background-color: var(--cyan);
+    border-radius: 50%;
+    font-weight: 800;
+}
+
+.workflow-step h4 {
+    margin-bottom: 8px;
+    color: var(--light-text);
+}
+
+.workflow-step p {
+    color: var(--muted-text);
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.iot-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 32px;
+}
+
+.iot-gallery figure {
+    position: relative;
+    min-height: 330px;
+    overflow: hidden;
+    background-color: var(--dark-navy);
+    border: 1px solid var(--line-color);
+    border-radius: 15px;
+}
+
+.iot-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.4s ease;
+}
+
+.iot-gallery figure:hover img {
+    transform: scale(1.025);
+}
+
+.iot-gallery figcaption {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    padding: 9px 12px;
+    color: var(--white);
+    background-color: rgba(8, 13, 25, 0.86);
+    border-radius: 7px;
+    font-size: 14px;
+}
+
+.iot-video-link {
+    margin-top: 28px;
+}
+
+/* =========================
+   Certificates
+========================= */
+
+.certificate-group + .certificate-group {
+    margin-top: 50px;
+}
+
+.certificate-group-title {
+    margin-bottom: 22px;
+    color: var(--light-text);
+    font-size: 22px;
+}
+
+.certificate-grid {
+    display: grid;
+    gap: 18px;
+}
+
+.academic-grid {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.technical-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.certificate-card {
+    display: flex;
+    min-height: 270px;
+    padding: 26px;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: var(--dark-card);
+    border: 1px solid var(--line-color);
+    border-radius: 16px;
+}
+
+
+/* ============================================
+   CERTIFICATE BRAND WITH LOGO
+
+   Fungsi:
+   - Menyusun logo dan nama institusi
+   - Mengekalkan saiz logo yang konsisten
+   - Menggunakan background dark
+============================================= */
+
+/* Container untuk logo dan nama institusi */
+.certificate-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    width: fit-content;
+    min-height: 56px;
+    margin-bottom: 18px;
+    padding: 9px 14px;
+
+    background-color: rgba(34, 211, 238, 0.08);
+    border: 1px solid rgba(34, 211, 238, 0.25);
+    border-radius: 10px;
+}
+
+.certificate-brand-logo {
+    display: block;
+    width: 46px;
+    height: 36px;
+
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.certificate-brand span {
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+
+.certificate-category {
+    margin-bottom: 8px;
+    color: var(--cyan);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+}
+
+.certificate-card h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+.certificate-issuer {
+    margin-bottom: 8px;
+    color: var(--muted-text);
+    font-size: 14px;
+}
+
+.certificate-detail {
+    color: var(--light-text);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.certificate-link {
+    margin-top: auto;
+    padding-top: 24px;
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.certificate-link::after {
+    margin-left: 6px;
+    color: var(--cyan);
+    content: "↗";
+}
+
+.certificate-link:hover {
+    color: var(--cyan);
+}
+
+.certificate-status {
+    margin-top: auto;
+    padding: 7px 11px;
+    color: var(--light-text);
+    background-color: rgba(148, 163, 184, 0.1);
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   Education Timeline
+========================= */
+
+.education-timeline {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    padding-top: 55px;
+}
+
+.education-timeline::before {
+    position: absolute;
+    top: 18px;
+    right: 12.5%;
+    left: 12.5%;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        var(--cyan),
+        rgba(34, 211, 238, 0.25)
+    );
+    content: "";
+}
+
+.education-item {
+    position: relative;
+}
+
+.timeline-marker {
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    width: 18px;
+    height: 18px;
+    background-color: var(--cyan);
+    border: 4px solid var(--dark-navy);
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.25);
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.education-card {
+    display: flex;
+    min-height: 430px;
+    padding: 28px;
+    flex-direction: column;
+    background-color: var(--dark-card);
+    border: 1px solid var(--line-color);
+    border-radius: 17px;
+}
+
+.education-year {
+    margin-bottom: 16px;
+    color: var(--cyan);
+    font-size: 15px;
+    font-weight: 800;
+}
+
+.education-card h3 {
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.education-card h4 {
+    margin-bottom: 14px;
+    color: var(--light-text);
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+.education-card p {
+    color: var(--muted-text);
+    line-height: 1.7;
+}
+
+.education-status {
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 7px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.education-status.completed {
+    color: var(--light-text);
+    background-color: rgba(148, 163, 184, 0.12);
+}
+
+.education-status.current {
+    color: var(--dark-navy);
+    background-color: var(--cyan);
+}
+
+/* ============================================
+   EDUCATION LOGO
+   Fungsi:
+   - Paparkan logo sekolah / universiti
+   - Letak dalam frame kecil yang kemas
+============================================= */
+
+.education-logo-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 72px;
+    height: 72px;
+    margin-bottom: 18px;
+    padding: 8px;
+
+    background-color: rgba(34, 211, 238, 0.08);
+    border: 1px solid rgba(34, 211, 238, 0.20);
+    border-radius: 14px;
+}
+
+.education-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* =========================
+   Contact Section
+========================= */
+
+contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 70px;
+}
+
+/* Menyusun kad LinkedIn dan GitHub */
+.contact-details {
+    display: grid;
+    gap: 18px;
+}
+
+/* Memastikan contact section responsive */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+}
+.contact-content h2 {
+    margin: 10px 0 20px;
+    font-size: clamp(42px, 6vw, 64px);
+    line-height: 1.1;
+}
+
+.contact-content > p:not(.section-label) {
+    max-width: 570px;
+    color: var(--muted-text);
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.contact-button {
+    margin-top: 30px;
+}
+
+.contact-card {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 18px;
+    min-height: 100px;
+    padding: 22px;
+    color: var(--white);
+    background-color: var(--dark-card);
+    border: 1px solid var(--line-color);
+    border-radius: 15px;
+    text-decoration: none;
+}
+
+.contact-icon {
+    display: inline-flex;
+    width: 54px;
+    height: 54px;
+    align-items: center;
+    justify-content: center;
+    color: var(--dark-navy);
+    background-color: var(--cyan);
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+.contact-label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--muted-text);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.contact-card h3 {
+    overflow-wrap: anywhere;
+    font-size: 17px;
+}
+
+.contact-arrow {
+    color: var(--cyan);
+    font-size: 22px;
+    transition: transform 0.3s ease;
+}
+
+.contact-card:hover .contact-arrow {
+    transform: translate(3px, -3px);
+}
+
+.location-card {
+    cursor: default;
+}
+
+
+/* =========================================================
+   Footer
+   Only copyright remains. Flexbox centers it at all widths.
+   ========================================================= */
+.footer {
+    padding: 24px 5%;
+    background-color: #050a14;
+    border-top: 1px solid var(--line-color);
+}
+
+.footer-container {
+    width: min(100%, 1200px);
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container p {
+    color: var(--muted-text);
+    font-size: 13px;
+    text-align: center;
+}

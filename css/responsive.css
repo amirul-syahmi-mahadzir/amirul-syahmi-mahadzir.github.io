@@ -1,0 +1,515 @@
+/* =========================
+   Laptop and Tablet
+========================= */
+
+@media (max-width: 1100px) {
+    /* Hero */
+
+    .hero {
+        gap: 55px;
+    }
+
+    .hero-image {
+        width: 290px;
+        height: 350px;
+    }
+
+    /* Featured Project */
+
+    .featured-project {
+        grid-template-columns: 1fr;
+    }
+
+    /* Certificates */
+
+    .technical-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Education */
+
+    .education-timeline {
+        grid-template-columns: repeat(2, 1fr);
+        padding-top: 0;
+    }
+
+    .education-timeline::before,
+    .timeline-marker {
+        display: none;
+    }
+
+    .education-card {
+        min-height: 350px;
+    }
+
+    /* Contact */
+
+    .contact-container {
+        gap: 50px;
+    }
+}
+
+
+/* =========================
+   Tablet
+========================= */
+
+@media (max-width: 900px) {
+    /* Navbar */
+
+    .navbar {
+        width: 92%;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+    /* Hero */
+
+    .hero {
+        min-height: auto;
+        padding: 80px 0;
+        grid-template-columns: 1fr;
+        gap: 60px;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 720px;
+        margin-inline: auto;
+    }
+
+    .hero-highlights,
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .description {
+        margin-inline: auto;
+    }
+
+    .hero-image {
+        grid-row: 1;
+        justify-self: center;
+        width: 280px;
+        height: 330px;
+    }
+
+    /* About and Contact */
+
+    .about-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* FYP Exhibition */
+
+    .exhibition-gallery {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .exhibition-main {
+        grid-row: auto;
+        min-height: 520px;
+    }
+
+    .exhibition-image:not(.exhibition-main) {
+        min-height: 300px;
+    }
+
+    /* Internship and IoT */
+
+    .internship-gallery,
+    .iot-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        max-width: 650px;
+    }
+}
+
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+    /* Navbar */
+
+    .navbar {
+        width: 92%;
+        height: 70px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .logo-mark {
+        width: 38px;
+        height: 38px;
+        font-size: 13px;
+    }
+
+    /* General Sections */
+
+    .section {
+        width: 92%;
+        padding: 70px 0;
+    }
+
+    .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .section-heading h2 {
+        font-size: 34px;
+    }
+
+    .section-description {
+        font-size: 15px;
+    }
+
+    /* Hero */
+
+    .hero {
+        width: 92%;
+        padding: 65px 0 75px;
+        gap: 50px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .hero h2 {
+        font-size: 23px;
+    }
+
+    .hero-highlights {
+        gap: 8px;
+    }
+
+    .hero-image {
+        width: 255px;
+        height: 305px;
+    }
+
+    .hero-image::before,
+    .hero-image::after {
+        width: 70px;
+        height: 70px;
+    }
+
+    /* About */
+
+    .about-container {
+        gap: 45px;
+    }
+
+    /* Project Cards */
+
+    .featured-project,
+    .internship-project,
+    .iot-project,
+    .project-exhibition {
+        padding: 22px;
+        border-radius: 17px;
+    }
+
+    /* AbilityScan Gallery */
+
+    .project-gallery {
+        grid-template-columns: 1fr;
+    }
+
+    .main-screenshot {
+        min-height: 310px;
+    }
+
+    .small-screenshots {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: none;
+    }
+
+    .screenshot-item {
+        min-height: 175px;
+    }
+
+    .project-content h3,
+    .internship-project-content h3,
+    .iot-project-content h3,
+    .exhibition-content h3 {
+        font-size: 26px;
+    }
+
+    /* FYP Exhibition */
+
+    .exhibition-content {
+        margin-bottom: 25px;
+    }
+
+    .exhibition-main {
+        min-height: 460px;
+    }
+
+    .exhibition-image:not(.exhibition-main) {
+        min-height: 260px;
+    }
+
+    /* Internship and IoT */
+
+    .internship-gallery,
+    .iot-gallery {
+        gap: 14px;
+    }
+
+    .internship-screenshot,
+    .iot-image {
+        min-height: 260px;
+    }
+
+    .project-roles {
+        grid-template-columns: 1fr;
+    }
+
+    /* Certificates */
+
+    .academic-grid,
+    .technical-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificate-card {
+        min-height: 250px;
+    }
+
+    /* Education */
+
+    .education-timeline {
+        grid-template-columns: 1fr;
+    }
+
+    .education-card {
+        min-height: auto;
+    }
+
+    .education-status {
+        margin-top: 30px;
+    }
+
+    /* Contact */
+
+    .contact-content h2 {
+        font-size: 44px;
+    }
+
+    .contact-card {
+        min-height: 90px;
+        padding: 18px;
+    }
+
+    .contact-icon {
+        width: 48px;
+        height: 48px;
+    }
+
+    /* Footer */
+
+    .footer-container {
+        grid-template-columns: 1fr auto;
+        gap: 20px;
+    }
+
+    .footer-note {
+        display: none;
+    }
+}
+
+
+/* =========================
+   Small Mobile
+========================= */
+
+@media (max-width: 480px) {
+    /* Navbar */
+
+    .navbar {
+        width: 90%;
+    }
+
+    /* Hero */
+
+    .hero {
+        padding: 55px 0 70px;
+        gap: 45px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        letter-spacing: -2px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .description {
+        font-size: 15px;
+    }
+
+    .hero-highlights {
+        justify-content: center;
+    }
+
+    .hero-highlights span {
+        font-size: 12px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-image {
+        width: 235px;
+        height: 285px;
+    }
+
+    /* General Sections */
+
+    .section {
+        width: 90%;
+        padding: 60px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 30px;
+    }
+
+    /* Project Cards */
+
+    .featured-project,
+    .internship-project,
+    .iot-project,
+    .project-exhibition {
+        padding: 17px;
+    }
+
+    /* AbilityScan Gallery */
+
+    .small-screenshots {
+        grid-template-columns: 1fr;
+    }
+
+    .main-screenshot,
+    .screenshot-item {
+        min-height: 220px;
+    }
+
+    /* FYP Exhibition */
+
+    .exhibition-main {
+        min-height: 400px;
+    }
+
+    .exhibition-image:not(.exhibition-main) {
+        min-height: 220px;
+    }
+
+    .exhibition-image figcaption {
+        right: 8px;
+        bottom: 8px;
+        left: 8px;
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    /* Internship and IoT */
+
+    .internship-screenshot,
+    .iot-image {
+        min-height: 220px;
+    }
+
+    .project-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .project-links .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-links .text-link {
+        text-align: center;
+    }
+
+    /* Certificates and Education */
+
+    .certificate-card,
+    .education-card {
+        padding: 22px;
+    }
+
+    /* Contact */
+
+    .contact-content h2 {
+        font-size: 38px;
+    }
+
+    .contact-content > p:not(.section-label) {
+        font-size: 16px;
+    }
+
+    .contact-card {
+        grid-template-columns: auto 1fr;
+        gap: 13px;
+    }
+
+    .contact-arrow {
+        display: none;
+    }
+
+    .contact-card h3 {
+        font-size: 14px;
+    }
+
+    /* Footer */
+
+    .footer {
+        padding: 22px 5%;
+    }
+
+    .footer-container > p {
+        font-size: 12px;
+    }
+}
+/* =========================================================
+   Mobile navbar brand
+   Allow the full portfolio name to wrap if the viewport is narrow.
+   ========================================================= */
+@media (max-width: 768px) {
+    .logo-name {
+        font-size: 15px;
+        max-width: 95%;
+        white-space: normal;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-name { font-size: 13px; }
+}
