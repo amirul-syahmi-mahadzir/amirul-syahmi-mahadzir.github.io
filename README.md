@@ -40,7 +40,7 @@ An IoT project involving a smart bin and a robotic garbage collector using Ardui
 
 ## Live Website
 
-Coming soon — GitHub Pages deployment.
+[Visit My Portfolio](https://amirul-syahmi-mahadzir.github.io/).
 
 ## Author
 
